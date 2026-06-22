@@ -47,7 +47,7 @@ Here's a walkthrough of implemented user stories:
 
 <img src='https://imgur.com/gallery/web102-unit-3-flashcards-pt-2-ppavxai' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-Also linked here: https://imgur.com/gallery/web102-unit-3-flashcards-pt-2-ppavxai
+Also linked here: https://imgur.com/a/web102-unit-3-flashcards-pt-2-ppavxai
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with QuickTime Player and DaVinci Resolve
