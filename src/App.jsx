@@ -8,6 +8,7 @@ const App = () => {
   const [cardSide, setCardSide] = useState("question");
   const [animate, setAnimate] = useState(true);
   const [check, setCheck] = useState("none");
+  const [userAnswer, setUserAnswer] = useState("");
 
   const atStart = cardNum > 0 ? false : true;
   const atEnd = cardNum < length - 1 ? false : true;
@@ -19,6 +20,7 @@ const App = () => {
       setCardNum(cardNum - 1);
       setCardSide("question");
       setCheck("none");
+      setUserAnswer("");
       requestAnimationFrame(() => setAnimate(true));
     }
   };
@@ -29,6 +31,7 @@ const App = () => {
       setCardNum(cardNum + 1);
       setCardSide("question");
       setCheck("none");
+      setUserAnswer("");
       requestAnimationFrame(() => setAnimate(true));
     }
   };
@@ -39,12 +42,9 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const userAnswer = formData.get("answer");
     if (userAnswer === cards[cardNum].answer) {
       setCheck("correct");
-    }
-    else {
+    } else {
       setCheck("incorrect");
     }
   };
@@ -63,6 +63,8 @@ const App = () => {
             className={`textBox ${check}`}
             placeholder="Your answer..."
             autoComplete="off"
+            value={userAnswer}
+            onChange={(e) => setUserAnswer(e.target.value)}
           />
           <button type="submit" className={`${cardSide === "answer" ? "greyed" : ""}`}>Submit</button>
         </form>
