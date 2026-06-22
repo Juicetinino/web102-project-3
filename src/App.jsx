@@ -62,6 +62,7 @@ const App = () => {
             name="answer"
             className={`textBox ${check}`}
             placeholder="Your answer..."
+            autoComplete="off"
           />
           <button type="submit" className={`${cardSide === "answer" ? "greyed" : ""}`}>Submit</button>
         </form>
